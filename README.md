@@ -15,8 +15,12 @@ La línea está compuesta por:
 
 Cada línea en el TXT es una pérdida de conexión con el servidor. Si tienes varias, así sea por microsegundos, deberías llamar a tu ISP porque es un problema.
 
+El TXT aparece en la misma carpeta dónde descomprimiste el zip.
+
 ### ¿Cómo lo uso?
 Descarga la [última versión](https://github.com/hugobullont/MinutosSinInternet/releases/download/v1.0/MinutosSinInternet-v1.0.zip "Descargar - v1.0") de MinutosSinInternet, descomprímelo y ejecuta **WithoutInternetWindows.exe **. El programa ejecuta un ping a *quicksight.us-east-1.amazonaws.com*  que es un servidor AWS. (AWS son los CloudServices dónde la mayoría de páginas se alojan, así que es un buen servidor para probar tu conexión.) Si decides cambiar de URL, puedes cambiarla en **WithoutInternetWindows.exe.config** con el Bloc de Notas o tu editor de texto preferido.
+
+El TXT aparece en la misma carpeta dónde descomprimiste el zip.
 
 ### ¿La ejecución afecta el rendimiento de mi PC?
 Para nada. El programa consume una milésima parte de tu ancho de banda y RAM. 
