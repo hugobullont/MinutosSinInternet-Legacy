@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.IO;
 using System.Net.NetworkInformation;
 
@@ -8,7 +9,7 @@ namespace WithoutInternetWindows
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("MinutosSinInternet - AWS US East Virginia");
+            Console.WriteLine("MinutosSinInternet");
             DoPing();
         }
 
@@ -19,10 +20,11 @@ namespace WithoutInternetWindows
             DateTime startTime = DateTime.Now;
             DateTime endTime;
             bool withOutInternet = false;
+            string urlToPing = ConfigurationManager.AppSettings["URL"];
             var logPath = "MinutosSinInternet.txt";
             using (var writer = File.AppendText(logPath))
             {
-                string lineTXT = "Minutos sin Internet - Ping: AWS US East Virginia - Hora de Inicio: " + DateTime.Now.ToString();
+                string lineTXT = $"Minutos sin Internet - Ping: {urlToPing} - Hora de Inicio: " + DateTime.Now.ToString();
                 writer.WriteLine(lineTXT);
             }
             while (true)
@@ -33,7 +35,7 @@ namespace WithoutInternetWindows
                 IPStatus status;
                 try
                 {
-                    reply = pinger.Send("quicksight.us-east-1.amazonaws.com");
+                    reply = pinger.Send(urlToPing);
                     line = DateTime.Now.ToString() + " " + reply.Status.ToString() + " " + reply.RoundtripTime.ToString() + "ms";
                     status = reply.Status;
                 }
