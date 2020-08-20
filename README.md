@@ -1,3 +1,6 @@
+### AVISO
+Esta es una versión legacy de MinutosSinInternet. La nueva versión, desarrollada sobre NodeJS la puedes encontrar [aquí.](https://github.com/hugobullont/MinutosSinInternet)
+
 # MinutosSinInternet
 Una herramienta para saber cuánto tiempo te quedas sin internet y demostrarle a tu ISP que está haciendo mal su trabajo.
 [Descargar - v1.0](https://github.com/hugobullont/MinutosSinInternet/releases/download/v1.0/MinutosSinInternet-v1.0.zip "Descargar - v1.0")
